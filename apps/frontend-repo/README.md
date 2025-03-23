@@ -4,8 +4,8 @@
 
 **eBuddy Test** is a monorepo project built using **Turborepo**, which includes:
 
-- **Backend**: An Express.js server for handling API requests.
-- **Frontend**: A Next.js application for the user interface.
+- **backend-repo**: An Express.js server for handling API requests.
+- **frontend-repo**: A Next.js application for the user interface.
 
 This monorepo structure ensures efficient code sharing and faster builds across multiple applications.
 
@@ -44,7 +44,17 @@ cd ebuddy-test
 npm install
 ```
 
-### 3️⃣ Start Development Server
+### 3️⃣ Setup Backend Credentials
+
+1. **Download the Firebase service account JSON file** from the Firebase Console.
+2. **Paste the file** into `apps/backend-repo/` and rename it to **`key.json`**.
+
+### 4️⃣ Setup Frontend Environment Variables
+
+1. **Copy** `.env.example` inside `apps/frontend-repo`.
+2. **Rename it** to `.env` and update the required values.
+
+### 5️⃣ Start Development Server
 
 Run the entire monorepo:
 
@@ -54,8 +64,8 @@ npm run dev
 
 Or start each service separately:
 
-- **Backend:** `npm run dev --workspace=backend`
-- **Frontend:** `npm run dev --workspace=frontend`
+- **Backend:** `npm run dev --workspace=backend-repo`
+- **Frontend:** `npm run dev --workspace=frontend-repo`
 
 ---
 

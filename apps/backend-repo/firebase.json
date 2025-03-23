@@ -1,0 +1,15 @@
+{
+  "functions": {
+    "source": "dist/apps/backend-repo/src",
+    "predeploy": "npm run build",
+    "codebase": "default"
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}

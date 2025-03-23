@@ -1,0 +1,32 @@
+{
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "ebuddy backend repo test",
+  "main": "server.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "start": "ts-node ./src/server.ts",
+    "build": "tsc && cp package.json dist/apps/backend-repo/src/package.json",
+    "dev": "npm run build && firebase emulators:start --only functions"
+  },
+  "author": "esasjana",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.2.0",
+    "firebase-functions": "^6.3.2",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "@ebuddy-test/shared": "*"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "concurrently": "^9.1.2",
+    "firebase-tools": "^13.34.0"
+  }
+}
